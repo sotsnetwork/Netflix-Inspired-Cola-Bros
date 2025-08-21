@@ -39,7 +39,7 @@ const Hero = () => {
         }`}>
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-8 leading-tight">
-            The Ocean Wrote My Story
+            The Ocean Wrote Our Story
           </h1>
           
           {/* Subheading */}
@@ -56,9 +56,16 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="flex items-center justify-center gap-3 bg-white text-black px-8 py-3 rounded font-semibold hover:bg-gray-200 transition-colors duration-200">
+            <button 
+              onClick={() => {
+                document.getElementById('stories')?.scrollIntoView({ 
+                  behavior: 'smooth' 
+                });
+              }}
+              className="flex items-center justify-center gap-3 bg-white text-black px-8 py-3 rounded font-semibold hover:bg-gray-200 transition-colors duration-200"
+            >
               <Play size={20} fill="currentColor" />
-              Watch Trailer
+              Watch Now
             </button>
             
             <button className="flex items-center justify-center gap-3 bg-gray-600/50 backdrop-blur-sm text-white px-8 py-3 rounded font-semibold hover:bg-gray-600/70 transition-colors duration-200">
