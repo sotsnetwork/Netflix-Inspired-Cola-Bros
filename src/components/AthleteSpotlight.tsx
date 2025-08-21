@@ -4,24 +4,24 @@ import { Award, Calendar, MapPin } from 'lucide-react';
 const AthleteSpotlight = () => {
   const athletes = [
     {
-      name: "Marcus Cola",
+      name: "Griffin Colapinto",
       title: "World Champion 2023",
-      image: "https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg",
+      image: "https://res.cloudinary.com/daon8me5h/image/upload/v1755786766/Griffin_Cola_ye4hlm.jpg",
       stats: [
         { icon: <Award />, label: "Titles", value: "12" },
         { icon: <Calendar />, label: "Pro Since", value: "2018" },
-        { icon: <MapPin />, label: "From", value: "Hawaii" }
+        { icon: <MapPin />, label: "From", value: "USA" }
       ],
       description: "Known for his aggressive style and fearless approach to massive waves."
     },
     {
-      name: "Diego Cola",
+      name: "Crosby Colapinto",
       title: "Rising Star",
-      image: "https://images.pexels.com/photos/1374666/pexels-photo-1374666.jpeg",
+      image: "https://res.cloudinary.com/daon8me5h/image/upload/v1755787123/Crosby_Cola_gfcrnn.jpg",
       stats: [
         { icon: <Award />, label: "Titles", value: "8" },
         { icon: <Calendar />, label: "Pro Since", value: "2019" },
-        { icon: <MapPin />, label: "From", value: "Brazil" }
+        { icon: <MapPin />, label: "From", value: "USA" }
       ],
       description: "The technical master with an innovative approach to modern surfing."
     }
