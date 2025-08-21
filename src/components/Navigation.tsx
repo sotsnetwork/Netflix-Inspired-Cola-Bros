@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
-const Navigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+interface NavItem {
+  label: string;
+  href: string;
+}
+
+const Navigation: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState<string>('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +32,7 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (href: string, label: string) => {
+  const handleNavClick = (href: string, label: string): void => {
     setIsMobileMenuOpen(false);
     setActiveSection(label.toLowerCase());
     
@@ -38,7 +43,7 @@ const Navigation = () => {
     }
   };
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { label: 'Home', href: '#home' },
     { label: 'Athletes', href: '#athletes' },
     { label: 'Competitions', href: '#competitions' },
@@ -47,9 +52,13 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
-    }`} role="navigation" aria-label="Main navigation">
+    <nav 
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
+      }`} 
+      role="navigation" 
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
